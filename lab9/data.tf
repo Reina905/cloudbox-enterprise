@@ -15,3 +15,13 @@ data "aws_dynamodb_table" "documents" {
 data "aws_lambda_function" "producer" {
   function_name = "createFile"
 }
+
+# API Gateway del Lab 7: busca por nombre del REST API
+data "aws_api_gateway_rest_api" "lab7_api" {
+  name = "FilesAPI"
+}
+
+# Distribución de CloudFront del Lab 8 (frontend React)
+data "aws_cloudfront_distribution" "lab8_frontend" {
+  id = "E1ACJ7XCVDINLQ"
+}
